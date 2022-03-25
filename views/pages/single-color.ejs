@@ -1,0 +1,34 @@
+<%- include('../partials/header'); %>
+
+<main class="main main-single container">
+    <h2 class="main-h2 text-center"><%= name %></h2>
+    <!-- <p class="text-white"> Player Name: <%= data.Player %></p> -->
+
+
+    <!-- prev and next -->
+
+    <section class="prev-and-next d-flex justify-content-around">
+        <p class="prev">
+            <% if(data.id > 1) { %>
+                <a href="/colors/<%= data.id - 1 %>" class="btn btn-large">Prev</a>
+            <% } %>
+        </p>
+        <p class="next">
+                <a href="/colors/<%= data.id + 1 %>" class="btn btn-large">Next</a>
+        </p>
+      </section>
+    <section class="section section-single d-flex justify-content-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 text-center">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.HaV-FQuZ4H1a_xDQhqXyRQHaDf&pid=Api&P=0&w=700&h=600" alt="Css Color pallette" class="img-fluid pb-5">
+                    <p class="text-white"> Color Name: <%= data.name %></p>
+                    <p class=" text-white"> Hex Code: <%= data.hex %></p>
+                </div>
+                
+            </div>
+        </div>        
+    </section>
+</main>
+
+<%- include('../partials/footer'); %>

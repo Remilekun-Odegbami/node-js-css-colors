@@ -1,0 +1,20 @@
+<%- include('../partials/header'); %>
+
+<main class="main main-players container">
+    <h2 class="text-center text-primary"><%= name %></h2>
+    <section class="section section-players mt-5">
+        <div class="row">
+            <% data.forEach(item => { %>
+                <div class="col-md-4 m-3">
+                    <p class="figure figure-player">Color Name: <a href="/colors/<%= item.id %>">  <%= item.name %> </a>
+                        <p class="figcaption figcap-hits"> Hex Code:
+                            <a href="#"> <%= item.hex %></a>
+                        </p>
+                    </p>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+</main>
+
+<%- include('../partials/footer'); %>
